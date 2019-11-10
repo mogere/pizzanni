@@ -1,4 +1,8 @@
-.back{
-height: 300px;
-width: 100vw;
+.jumbotron{
+    width: 100wv;
+    margin: 0px;
+}
+.image-text{
+    position: absolute;
+
 }
