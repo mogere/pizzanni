@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <style rel = "stylesheet" type="text/css"href="css/bootstrap.min.css" ></style>
-   <style rel = "stylesheet" type="text/css" href="css/styles.css"></style>
+   <link rel = "stylesheet" type="text/css"href="css/bootstrap.min.css" >
+   <link rel = "stylesheet" type="text/css" href="css/styles.css">
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <title>Pizzanni</title>
 </head>
 <body>
-    <div class="container container-fluid">
-        <div class="row">
-            <div class="jumbotron-fluid">
+    <div class="container">
+            <div class="col-md-12">
                     <img src="img/bacground.jpeg" alt="">  
-                    <h1 class="image-text">Welcome to Pizzani</h1> 
-            </div>            
+                    <h1 class="image-text ">Welcome to Pizzani</h1>          
         </div>
         <div class="row">
             <div class="col-md-12 back">
-                <img src="https://via.placeholder.com/150
-
-                C/O https://placeholder.com/" alt="">
                 <h3>Choose your preferred pizza</h3>
                 
             </div>            
@@ -34,35 +29,62 @@
                         <h4>Large Pizza</h4>
                     </div>
                     <div class="card-body">
-                        <img src="img/pizza1.jpeg" alt="">
+                        <img src="img/pizza 4.jpeg" >
                     </div>
                 </div>  
             </div>
             <div class="col-md-4">
                     <div class="card">
                         <div class="card-title">
-                            <h4>Large Pizza</h4>
+                            <h4>Medium Pizza</h4>
                         </div>
                         <div class="card-body">
-                            <img src="img/pizza1.jpeg" alt="">
+                            <img src="img/pizza3.jpeg" >
                         </div>
                     </div>  
             </div>
                 <div class="col-md-4">
                 <div class="card">
-                        <img src="img/pizza1.jpeg" alt="">
+                    <div class="card-title">
+                        <h4>Small Pizza</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/pizza2.jpeg">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
+                    <div class="card-title">
+                            <h4>Please select your preferred options</h4>
+                        </div>
                     <div class="card">
-                            <img src="img/pizza1.jpeg" alt="">
+                          <form action="order">
+                            <label for="size">Choose your pizza size</label>   
+                            <select>                                   
+                                        <option value="small">Small Pizza</option>
+                                        <option value="medium">Medium Pizza</option>
+                                        <option value="Large">Large Pizza</option>
+                            </select><br>
+                            <label for="crust">Choose your crust option</label>
+                            <select>                                   
+                                    <option value="crispy">Crispy</option>
+                                    <option value="stuffed">Stuffed</option>
+                                    <option value="gluten-free">Gluten-free</option>
+                            </select><br>
+                            <label for="topping">Choose your crust option</label>
+                            <select>                                   
+                                    <option value="mushroom">Mushroom</option>
+                                    <option value="pineapple">Pineapple</option>
+                                    <option value="extra">Extra</option>
+                            </select><br>
+                          </form>
                     </div>
             </div>
             <div class="col-md-6">
                     <div class="card">
-                            <img src="img/pizza1.jpeg" alt="">
+                           <h2>Here is your order</h2>
                     </div>
             </div>
         </div>

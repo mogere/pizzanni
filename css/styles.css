@@ -1,8 +1,15 @@
 .jumbotron{
     width: 100wv;
+    height: 300px;
     margin: 0px;
 }
 .image-text{
+    color: white;
     position: absolute;
-
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card-title{
+    text-align: center;
 }
