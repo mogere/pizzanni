@@ -23,7 +23,7 @@ $(document).ready(function(){
     //     this.size=size;
     //     this.cost=cost;
     // }
-    var total=0;
+    
     $("#large").click(function(){
         total=total+1,200;
         $(".items").append('<tr class="item"><td> 1 Large Pizza</td><td>1,200</td></tr>')
@@ -37,7 +37,29 @@ $(document).ready(function(){
         $(".items").append('<tr class="item"><td> 1 small Pizza</td><td>600</td></tr>')
     });
 
-    function appendTotal(){
-        $(".items").append('<tr class="item"><td> Your total is:</td><td>total</td></tr>')
-    }
+    
 });
+var total=0;
+function appendTotal(){
+    $(".items").append('<tr><td> Your total is:</td><td>total</td></tr>')
+}
+function addExtras(){
+    var checkedValue = null;
+    var crust = document.getElementsByName("crust");
+    var toppings = document.getElementsByName("toppings");
+       
+        for(var i=0; crust[i]; i++){
+            
+             if(crust[i].checked){
+                if (crust[i].value ==="crispy")
+                    total=total+90;  
+                else if (crust[i].value ==="stuffed")
+                    total=total+70;    
+                else if (crust[i].value ==="gluten")
+                    total=total+70;                           
+            }
+            else 
+            alert("Please enter your gender");        
+
+    }
+}
