@@ -1,13 +1,32 @@
-/* .top{
+.container-fluid{
     width: 100wv;
-    height: 300px;
+    height: 200px;
     margin: 0px;
-} */
+}
+.choice{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+span{
+    color: red;
+    size: 60px;
+}
 .image-text{
     color: white;
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-text1{
+    color: white;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -30,7 +49,7 @@ h4{
 .resize{
     max-width: 100%;
     max-height: 100%;
-    /* display: block; */
+    display: block;
 }
 body{
  margin: 0;
