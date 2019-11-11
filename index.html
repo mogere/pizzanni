@@ -27,41 +27,41 @@
         <div class="row sizes">
             <p></p>
             <div class="col-md-4">
-                <div class="card large-pizza">
+                <div class="card pointer large-pizza">
                     <div class="card-title">
                         <h4>Large Pizza</h4>
                     </div>
                     <div class="card-body">
-                        <img src="img/pizza 4.jpeg" id="large" class="resize" ><br><br><br>
-                        <p class="choice">choose this pizza</p>
+                        <img src="img/pizza 4.jpeg" id="large" class="resize large" ><br><br><br>
+                        <!-- <h1 class="choice1 text-center">Choose this pizza</h1> -->
                         <p class="pizza-text text-center">An 18" inch sweet and delicious italian style pizza made with love and style</p>
                         <h5 class="text-center">Ksh 1200</h5>
                     </div>
                 </div>  
             </div>
             <div class="col-md-4">
-                    <div class="card medium-pizza">
+                    <div class="card pointer medium-pizza">
                         <div class="card-title">
                             <h4>Medium Pizza</h4>
                         </div>
                         <div class="card-body">
                             <img src="img/pizza3.jpeg" id="medium" class="resize medium"><br><br>
-                            <p class="choice">choose this pizza</p>
+                            <!-- <h1 class="choice2 text-center">Choose this pizza</h1> -->
                             <P class="pizza-text text-center">A 14" inch sweet and delicious italian style pizza to satisfy your craving</P>
                             <h5 class="text-center">Ksh 800</h5>
                         </div>
                     </div>  
             </div>
                 <div class="col-md-4">
-                <div class="card small-pizza">
+                <div class="card pointer small-pizza">
                     <div class="card-title">
                         <h4>Small Pizza</h4>
                     </div>
                     <div class="card-body">
                         <img src="img/pizza2.jpeg" id="small" class="resize small">
-                        <p class="choice">choose this pizza</p>
+                        <!-- <h1 class="choice3 text-center">Choose this pizza</h1> -->
                         <p class="pizza-text text-center">A 10" sweet and delicious italian style pizza with the topping of your choice</p>
-                        <h5 class="text-center">Ksh 600</h5>
+                        <h5 class="text-center">Ksh 600</h5><br>
                     </div>
                 </div>
             </div>
@@ -78,14 +78,14 @@
                             
                             
                             <b><label for="crust">Choose your crust option</label><br></b>
-                            Crispy &nbsp;<input class="crust" type="radio" name="gender" value="crispy">&nbsp;&nbsp;
-                            Stuffed&nbsp; <input class="crust" type="radio" name="gender" value="stuffed">&nbsp;&nbsp;
-                            Gluten-free&nbsp; <input class="crust" type="radio" name="gender" value="gluten">
+                            Crispy &nbsp;<input class="crust" type="radio" name="crust" value="crispy">&nbsp;&nbsp;
+                            Stuffed&nbsp; <input class="crust" type="radio" name="crust" value="stuffed">&nbsp;&nbsp;
+                            Gluten-free&nbsp; <input class="crust" type="radio" name="crust" value="gluten">
                             <p></p>
                            <b> <label for="topping">Choose your toppings</label><br></b>
-                           Mushroom &nbsp; <input class="crust" type="radio" name="gender" value="mushroom">&nbsp;&nbsp;
-                           Pineapple&nbsp; <input class="crust" type="radio" name="gender" value="pineapple">&nbsp;&nbsp;
-                           Cheese&nbsp; <input class="crust" type="radio" name="gender" value="cheese">
+                           Mushroom &nbsp; <input class="topping" type="radio" name="topping" value="mushroom">&nbsp;&nbsp;
+                           Pineapple&nbsp; <input class="topping" type="radio" name="topping" value="pineapple">&nbsp;&nbsp;
+                           Cheese&nbsp; <input class="topping" type="radio" name="topping" value="cheese">
                             
                           </form>
                           <button id="cart" >Add to cart</button>
@@ -94,6 +94,9 @@
             <div class="col-md-6">
                     <div class="card">
                            <h2>Here is your order</h2>
+                           <table class="items">
+                               <tr class="item"><td>Item</td><td>cost</td></tr>
+                           </table>
                            <button id="checkout" >Checkout</button>
                     </div>
             </div>

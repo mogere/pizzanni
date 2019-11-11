@@ -3,7 +3,9 @@
     height: 200px;
     margin: 0px;
 }
-.choice{
+.choice1, .choice2, .choice3{
+    
+    color: chartreuse;
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 40%;
@@ -54,6 +56,9 @@ h4{
 body{
  margin: 0;
  padding: 0;   
+}
+.pointer, radio{
+ cursor: pointer;
 }
 .container-fluid{
     margin: 0;
