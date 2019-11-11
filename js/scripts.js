@@ -27,6 +27,7 @@ $(document).ready(function(){
     $("#large").click(function(){
         total=total+1,200;
         $(".items").append('<tr class="item"><td> 1 Large Pizza</td><td>1,200</td></tr>')
+        alert(large.toppings());
     });
     $("#medium").click(function(){
         total=total+800;
@@ -37,29 +38,36 @@ $(document).ready(function(){
         $(".items").append('<tr class="item"><td> 1 small Pizza</td><td>600</td></tr>')
     });
 
+    var radioValue = $("input[name='crust']:checked").val();
+    if(radioValue ==="crispy"){
+        $(".items").append('<tr class="item"><td> Crispy crust</td><td>120</td></tr>')
+    }
+    else if (radioValue ==="stuffed"){
+        $(".items").append('<tr class="item"><td> Crispy crust</td><td>150</td></tr>')
+    }
+    else if(radioValue ==="gluten"){
+        $(".items").append('<tr class="item"><td> Crispy crust</td><td>130</td></tr>')
+    }
     
 });
 var total=0;
+var crust;
 function appendTotal(){
-    $(".items").append('<tr><td> Your total is:</td><td>total</td></tr>')
+    $(".items > tbody:last").append('<tr><td> Your total is:</td><td>total</td></tr>')
 }
-function addExtras(){
-    var checkedValue = null;
-    var crust = document.getElementsByName("crust");
-    var toppings = document.getElementsByName("toppings");
-       
-        for(var i=0; crust[i]; i++){
-            
-             if(crust[i].checked){
-                if (crust[i].value ==="crispy")
-                    total=total+90;  
-                else if (crust[i].value ==="stuffed")
-                    total=total+70;    
-                else if (crust[i].value ==="gluten")
-                    total=total+70;                           
-            }
-            else 
-            alert("Please enter your gender");        
 
-    }
+function pizza(size, cost, crust, toppings){
+    this.size=size;
+    this.cost=cost;
+    this.crust=crust;
+    this.toppings=toppings
 }
+function getCrust(){
+    return crust=document.getElementsByName("crust");
+}
+function getToppings(){
+   return toppings=document.getElementsByName("topping");
+}
+var large=new pizza("Large", 1,200, getCrust, getToppings);
+var medium=new pizza("Medium", 800, getCrust, getToppings);
+var small=new pizza("Small", 600, getCrust, getToppings);
