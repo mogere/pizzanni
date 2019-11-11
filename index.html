@@ -11,25 +11,29 @@
     <title>Pizzanni</title>
 </head>
 <body>
-    <div class="container">
-            <div class="col-md-12">
-                    <img src="img/bacground.jpeg" alt="">  
+    <div class="container-fluid">
+            <div class="col-md-12 top">
+                    <img src="img/background" class="resize">  
                     <h1 class="image-text ">Welcome to Pizzani</h1>          
         </div>
         <div class="row">
-            <div class="col-md-12 back">
+            <div class="col-md-12 back text-center">
+                <p></p>
                 <h3>Choose your preferred pizza</h3>
-                
+                <p></p>
             </div>            
         </div>
-        <div class="row">
+        <div class="row sizes">
+            <p></p>
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-title">
                         <h4>Large Pizza</h4>
                     </div>
                     <div class="card-body">
-                        <img src="img/pizza 4.jpeg" >
+                        <img src="img/pizza 4.jpeg" class="resize" ><br><br><br>
+                        <p class="pizza-text text-center">An 18" inch sweet and delicious italian style pizza made with love and style</p>
+                        <h5 class="text-center">Ksh 1200</h5>
                     </div>
                 </div>  
             </div>
@@ -39,7 +43,9 @@
                             <h4>Medium Pizza</h4>
                         </div>
                         <div class="card-body">
-                            <img src="img/pizza3.jpeg" >
+                            <img src="img/pizza3.jpeg"  class="resize medium"><br><br>
+                            <P class="pizza-text text-center">A 14" inch sweet and delicious italian style pizza to satisfy your craving</P>
+                            <h5 class="text-center">Ksh 800</h5>
                         </div>
                     </div>  
             </div>
@@ -49,24 +55,24 @@
                         <h4>Small Pizza</h4>
                     </div>
                     <div class="card-body">
-                        <img src="img/pizza2.jpeg">
+                        <img src="img/pizza2.jpeg" class="resize small">
+                        <p class="pizza-text text-center">A 10" sweet and delicious italian style pizza with the topping of your choice</p>
+                        <h5 class="text-center">Ksh 600</h5>
                     </div>
                 </div>
             </div>
+            <br><br>
         </div>
-        <div class="row">
+        <div class="row forms">
             <div class="col-md-6">
-                    <div class="card-title">
-                            <h4>Please select your preferred options</h4>
-                        </div>
+                   
                     <div class="card">
+                            <div class="card-title">
+                                <h4>Choose your preferred crust and toppings</h4>
+                            </div>
                           <form action="order">
-                            <label for="size">Choose your pizza size</label>   
-                            <select>                                   
-                                        <option value="small">Small Pizza</option>
-                                        <option value="medium">Medium Pizza</option>
-                                        <option value="Large">Large Pizza</option>
-                            </select><br>
+                            
+                            
                             <label for="crust">Choose your crust option</label>
                             <select>                                   
                                     <option value="crispy">Crispy</option>
@@ -80,20 +86,18 @@
                                     <option value="extra">Extra</option>
                             </select><br>
                           </form>
+                          <button id="cart" >Add to cart</button>
                     </div>
             </div>
             <div class="col-md-6">
                     <div class="card">
                            <h2>Here is your order</h2>
+                           <button id="checkout" >Checkout</button>
                     </div>
             </div>
+        </div> 
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <button id="checkout" >Checkout</button>
-            </div>
-        </div>
-    <footer>copyright nyatichi</footer> 
+   
     </div>  
 </body>
 </html>
