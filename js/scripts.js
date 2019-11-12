@@ -32,12 +32,7 @@ function appendTotal(){
     
 }
 
-function pizza(size, cost, crust, toppings){
-    this.size=size;
-    this.cost=cost;
-    this.crust=[];
-    this.toppings=[];
-}
+
 function confirmDelivery(){
     var delivery = confirm("Do you want your Pizza delivered to you?");
     if(delivery){
