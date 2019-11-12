@@ -25,7 +25,7 @@ $(document).ready(function(){
     // }
     
     $("#large").click(function(){
-        total=total+1,200;
+        total=total+1200;
         $(".items").append('<tr class="item"><td> 1 Large Pizza</td><td>1,200</td></tr>')
         alert(large.toppings());
     });
@@ -53,6 +53,7 @@ $(document).ready(function(){
 var total=0;
 var crust;
 function appendTotal(){
+    confirmDelivery();
     $(".items > tbody:last").last().append('<tr>' + 
     '<td>'+ 'Your total is:'+
     '</td>'+
@@ -62,7 +63,7 @@ function appendTotal(){
     '</tr>')
     $("#checkout").attr("disabled", true);
     $("#large").attr("disabled", true);
-    confirmDelivery();
+    
 }
 
 function pizza(size, cost, crust, toppings){
@@ -74,8 +75,9 @@ function pizza(size, cost, crust, toppings){
 function confirmDelivery(){
     var delivery = confirm("Do you want your Pizza delivered to you?");
     if(delivery){
-       
-
+        total=total+150;
+        var location = prompt("Please enter your location");
+        alert("Your pizza will be delivered to "+location + " at Ksh 150." );
     }
 }
 function getCrust(){
@@ -89,7 +91,7 @@ var medium=new pizza("Medium", 800, getCrust, getToppings);
 var small=new pizza("Small", 600, getCrust, getToppings);
 
 function toppingsPrice(getToppings) {
-    var toppingPrice = 0;
+    toppingPrice = 0;
     for (i = 0; i < toppings.length; i++) {
       if (getToppings[i] == "mushroom") {
         toppingPrice += 100;
@@ -102,6 +104,6 @@ function toppingsPrice(getToppings) {
       }
     }
     
-    return toppingPrice * 1;
+    return toppingPrice;
   }
-  alert(toppingsPrice());
+  alert(toppingPrice);
