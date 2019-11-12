@@ -53,14 +53,30 @@ $(document).ready(function(){
 var total=0;
 var crust;
 function appendTotal(){
-    $(".items > tbody:last").append('<tr><td> Your total is:</td><td>total</td></tr>')
+    $(".items > tbody:last").last().append('<tr>' + 
+    '<td>'+ 'Your total is:'+
+    '</td>'+
+    '<td>'+
+    total+
+    '</td>'+
+    '</tr>')
+    $("#checkout").attr("disabled", true);
+    $("#large").attr("disabled", true);
+    confirmDelivery();
 }
 
 function pizza(size, cost, crust, toppings){
     this.size=size;
     this.cost=cost;
-    this.crust=crust;
-    this.toppings=toppings
+    this.crust=[];
+    this.toppings=[];
+}
+function confirmDelivery(){
+    var delivery = confirm("Do you want your Pizza delivered to you?");
+    if(delivery){
+       
+
+    }
 }
 function getCrust(){
     return crust=document.getElementsByName("crust");
@@ -71,3 +87,21 @@ function getToppings(){
 var large=new pizza("Large", 1,200, getCrust, getToppings);
 var medium=new pizza("Medium", 800, getCrust, getToppings);
 var small=new pizza("Small", 600, getCrust, getToppings);
+
+function toppingsPrice(getToppings) {
+    var toppingPrice = 0;
+    for (i = 0; i < toppings.length; i++) {
+      if (getToppings[i] == "mushroom") {
+        toppingPrice += 100;
+      }
+      if (getToppings[i] == "pineapple") {
+        toppingPrice += 50;
+      }
+      if (getToppings[i] == "cheese") {
+        toppingPrice += 75;
+      }
+    }
+    
+    return toppingPrice * 1;
+  }
+  alert(toppingsPrice());

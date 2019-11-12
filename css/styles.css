@@ -32,7 +32,7 @@ span{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-h5{
+h5, .order{
     color: green;
 }
 h4{
@@ -79,4 +79,7 @@ form{
 }
 button{
     margin: 10px;
+}
+th{
+    text-decoration: underline;
 }

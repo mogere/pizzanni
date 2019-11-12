@@ -88,15 +88,15 @@
                            Cheese&nbsp; <input class="topping" type="radio" name="topping" value="cheese">
                             
                           </form>
-                          <button id="cart" onclick="addExtras()">Add to cart</button>
+                          <button id="cart" onclick="toppingsPrice()">Add to cart</button>
                     </div>
             </div>
             <div class="col-md-6">
                     <div class="card">
-                           <h2>Here is your order</h2>
+                           <h2 class="order text-center">Here is your order</h2>
                            <table class="items">
                                <tbody>
-                               <tr class="item"><td>Item</td><td>cost</td></tr>
+                              <th class="item"><td><b>Item</b></td><td><b>cost</td></th>
                                 </tbody>
                            </table>
                            <button id="checkout" onclick="appendTotal()" >Checkout</button>
