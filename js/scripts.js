@@ -67,6 +67,7 @@ optionCrust = document.getElementsByName("crust");
       total=total+crust;
     break;
     }
+    alert(crust)
   }
   optionTopping = document.getElementsByName("topping");
   for (var i = 0, length = optionTopping.length; i < length; i++)
@@ -77,5 +78,6 @@ optionCrust = document.getElementsByName("crust");
       total=total+toppings;
     break;
     }
+    alert(toppings)
   }
 }
