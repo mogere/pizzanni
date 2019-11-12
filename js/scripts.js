@@ -1,29 +1,5 @@
 $(document).ready(function(){
-    // $(".large-pizza").hover(function(){
-    //     $(".large").fadeIn();
-    //     $(".choice1").show();
-    // }, function(){
-    //     $(".choice1").hide();
-    // });
-
-    // $(".medium-pizza").hover(function(){
-    //     $("#medium").fadeIn();
-    //     $(".choice2").show();
-    // }, function(){
-    //     $(".choice2").hide();
-    // });
-
-    // $(".small-pizza").hover(function(){
-    //     $("#small").fadeIn();
-    //     $(".choice3").show();
-    // }, function(){
-    //     $(".choice3").hide();
-    // });
-    // function pizza(size, cost){
-    //     this.size=size;
-    //     this.cost=cost;
-    // }
-    
+     
     $("#large").click(function(){
         total=total+1200;
         $(".items").append('<tr class="item"><td> 1 Large Pizza</td><td>1,200</td></tr>')
@@ -38,16 +14,10 @@ $(document).ready(function(){
         $(".items").append('<tr class="item"><td> 1 small Pizza</td><td>600</td></tr>')
     });
 
-    var radioValue = $("input[name='crust']:checked").val();
-    if(radioValue ==="crispy"){
-        $(".items").append('<tr class="item"><td> Crispy crust</td><td>120</td></tr>')
-    }
-    else if (radioValue ==="stuffed"){
-        $(".items").append('<tr class="item"><td> Crispy crust</td><td>150</td></tr>')
-    }
-    else if(radioValue ==="gluten"){
-        $(".items").append('<tr class="item"><td> Crispy crust</td><td>130</td></tr>')
-    }
+    $(".crust").checked(function(){
+        
+    });
+   
     
 });
 var total=0;
@@ -79,6 +49,7 @@ function confirmDelivery(){
         var location = prompt("Please enter your location");
         alert("Your pizza will be delivered to "+location + " at Ksh 150." );
     }
+    document.getElementById("output").innerHTML = "The total cost for your order is: "+total+" Thank you for shopping with us.";
 }
 function getCrust(){
     return crust=document.getElementsByName("crust");
@@ -90,20 +61,23 @@ var large=new pizza("Large", 1,200, getCrust, getToppings);
 var medium=new pizza("Medium", 800, getCrust, getToppings);
 var small=new pizza("Small", 600, getCrust, getToppings);
 
-function toppingsPrice(getToppings) {
-    toppingPrice = 0;
-    for (i = 0; i < toppings.length; i++) {
-      if (getToppings[i] == "mushroom") {
-        toppingPrice += 100;
-      }
-      if (getToppings[i] == "pineapple") {
-        toppingPrice += 50;
-      }
-      if (getToppings[i] == "cheese") {
-        toppingPrice += 75;
-      }
+function extras(){
+optionCrust = document.getElementsByName("crust");
+  for (var i = 0, length = optionCrust.length; i < length; i++)
+  {
+    if (optionCrust[i].checked)
+    {
+      crust = optionCrust[i].value
+    break;
     }
-    
-    return toppingPrice;
   }
-  alert(toppingPrice);
+  optionTopping = document.getElementsByName("topping");
+  for (var i = 0, length = optionTopping.length; i < length; i++)
+  {
+    if (optionTopping[i].checked)
+    {
+      crust = optionTopping[i].value
+    break;
+    }
+  }
+}

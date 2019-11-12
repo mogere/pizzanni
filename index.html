@@ -78,17 +78,17 @@
                             
                             
                             <b><label for="crust">Choose your crust option</label><br></b>
-                            Crispy &nbsp;<input class="crust" type="radio" name="crust" value="crispy">&nbsp;&nbsp;
-                            Stuffed&nbsp; <input class="crust" type="radio" name="crust" value="stuffed">&nbsp;&nbsp;
-                            Gluten-free&nbsp; <input class="crust" type="radio" name="crust" value="gluten">
+                            Crispy &nbsp;<input class="crust" type="radio" name="crust" value="100">&nbsp;&nbsp;
+                            Stuffed&nbsp; <input class="crust" type="radio" name="crust" value="120">&nbsp;&nbsp;
+                            Gluten-free&nbsp; <input class="crust" type="radio" name="crust" value="150">
                             <p></p>
                            <b> <label for="topping">Choose your toppings</label><br></b>
-                           Mushroom &nbsp; <input class="topping" type="radio" name="topping" value="mushroom">&nbsp;&nbsp;
-                           Pineapple&nbsp; <input class="topping" type="radio" name="topping" value="pineapple">&nbsp;&nbsp;
-                           Cheese&nbsp; <input class="topping" type="radio" name="topping" value="cheese">
+                           Mushroom &nbsp; <input class="topping" type="radio" name="topping" value="90">&nbsp;&nbsp;
+                           Pineapple&nbsp; <input class="topping" type="radio" name="topping" value="70">&nbsp;&nbsp;
+                           Cheese&nbsp; <input class="topping" type="radio" name="topping" value="100">
                             
                           </form>
-                          <button id="cart" onclick="toppingsPrice()">Add to cart</button>
+                          <button id="cart" onclick="extras()">Add to cart</button>
                     </div>
             </div>
             <div class="col-md-6">
@@ -96,9 +96,10 @@
                            <h2 class="order text-center">Here is your order</h2>
                            <table class="items">
                                <tbody>
-                              <th class="item"><td><b>Item</b></td><td><b>cost</td></th>
+                              <tr class="item"><td><b>Item</b></td><td><b>cost</td></tr>
                                 </tbody>
                            </table>
+                           <output id="output"></output>
                            <button id="checkout" onclick="appendTotal()" >Checkout</button>
                     </div>
             </div>
