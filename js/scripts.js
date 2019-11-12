@@ -63,21 +63,21 @@ optionCrust = document.getElementsByName("crust");
   {
     if (optionCrust[i].checked)
     {
-      crust = parseInt(optionCrust[i].value)
+      crust = optionCrust[i].value
       total=total+crust;
     break;
     }
-    alert(crust)
+    alert("you have chosen the " +optioncrust[i].id+" Topping")
   }
   optionTopping = document.getElementsByName("topping");
   for (var i = 0, length = optionTopping.length; i < length; i++)
   {
     if (optionTopping[i].checked)
     {
-      toppings = parseInt(optionTopping[i].value)
-      total=total+toppings;
+      toppings = optionTopping[i].value
+      total=total+optionToppings[i].value;
     break;
     }
-    alert(toppings)
+    alert("you have chosen the " +optionTopping[i].id+" Topping")
   }
 }
