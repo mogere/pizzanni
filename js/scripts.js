@@ -13,15 +13,11 @@ $(document).ready(function(){
         total=total+600;
         $(".items").append('<tr class="item"><td> 1 small Pizza</td><td>600</td></tr>')
     });
-
-    $(".crust").checked(function(){
-        
-    });
    
-    
 });
 var total=0;
 var crust;
+var toppings;
 function appendTotal(){
     confirmDelivery();
     $(".items > tbody:last").last().append('<tr>' + 
@@ -67,7 +63,8 @@ optionCrust = document.getElementsByName("crust");
   {
     if (optionCrust[i].checked)
     {
-      crust = optionCrust[i].value
+      crust = parseInt(optionCrust[i].value)
+      total=total+crust;
     break;
     }
   }
@@ -76,7 +73,8 @@ optionCrust = document.getElementsByName("crust");
   {
     if (optionTopping[i].checked)
     {
-      crust = optionTopping[i].value
+      toppings = parseInt(optionTopping[i].value)
+      total=total+toppings;
     break;
     }
   }
