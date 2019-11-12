@@ -42,15 +42,6 @@ function confirmDelivery(){
     }
     document.getElementById("output").innerHTML = "The total cost for your order is: "+total+" Thank you for shopping with us.";
 }
-function getCrust(){
-    return crust=document.getElementsByName("crust");
-}
-function getToppings(){
-   return toppings=document.getElementsByName("topping");
-}
-var large=new pizza("Large", 1,200, getCrust, getToppings);
-var medium=new pizza("Medium", 800, getCrust, getToppings);
-var small=new pizza("Small", 600, getCrust, getToppings);
 
 function extras(){
 optionCrust = document.getElementsByName("crust");
